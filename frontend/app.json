@@ -21,8 +21,14 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#3563E9"
       },
-      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
+    "newArchEnabled": false,
     "plugins": [
       "expo-status-bar",
       [
@@ -32,6 +38,11 @@
           "cameraPermission": "Allow Monefy to use the camera to scan bills."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2d5c0a28-fc72-486a-b4c2-cefb28f812b4"
+      }
+    }
   }
 }
