@@ -28,7 +28,6 @@
         "android.permission.RECORD_AUDIO"
       ]
     },
-    "newArchEnabled": false,
     "plugins": [
       "expo-status-bar",
       [
@@ -36,6 +35,14 @@
         {
           "photosPermission": "Allow Monefy to access your photos to scan bills.",
           "cameraPermission": "Allow Monefy to use the camera to scan bills."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "newArchEnabled": false
+          }
         }
       ]
     ],
