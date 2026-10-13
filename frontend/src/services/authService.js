@@ -1,6 +1,7 @@
 import Constants from 'expo-constants';
 
 const getBaseUrl = () => {
+  if (process.env.EXPO_PUBLIC_API_URL) return process.env.EXPO_PUBLIC_API_URL;
   const host = Constants.expoConfig?.hostUri?.split(':')[0];
   if (host) return `http://${host}:5000`;
   return 'http://localhost:5000';

@@ -7,6 +7,7 @@ import { RefreshCw, PenLine, AlertCircle, CheckCircle } from 'lucide-react-nativ
 import { COLORS } from '../constants/colors';
 
 const getBaseUrl = () => {
+  if (process.env.EXPO_PUBLIC_API_URL) return process.env.EXPO_PUBLIC_API_URL;
   const host = Constants.expoConfig?.hostUri?.split(':')[0];
   if (host) return `http://${host}:5000`;
   return 'http://localhost:5000';
